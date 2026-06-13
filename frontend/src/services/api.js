@@ -32,7 +32,7 @@ export const loginUser = async (userData) => {
 
 export const fetchBooks = async () => {
   try {
-    const response = await axios.get(`${API_URL}/api/books`);
+    const response = await axios.get(`${API_URL}/books`);
     return response.data;
   } catch (error) {
     throw new Error(handleApiError(error, "Failed to fetch books"));
@@ -41,7 +41,7 @@ export const fetchBooks = async () => {
 
 export const fetchBookDetails = async (bookId) => {
   try {
-    const response = await axios.get(`${API_URL}/api/books/${bookId}`);
+    const response = await axios.get(`${API_URL}/books/${bookId}`);
     return response.data;
   } catch (error) {
     throw new Error(handleApiError(error, "Failed to fetch book details"));
